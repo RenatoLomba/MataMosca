@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+
+		<title>Mata Mosca - Inicio</title>
+		<meta charset="utf-8">
+
+		<!-- Bootstrap CDN -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+		<!-- Estilo CSS -->
+		<link rel="stylesheet" type="text/css" href="css/estilo.css">
+
+		<script type="text/javascript">
+			
+			//inicia o jogo com base na dificuldade
+			function iniciarJogo() {
+				var nivel = document.getElementById('id_dificuldade').value
+
+				if (nivel === '') {
+					alert('Escolha um nível de dificuldade para iniciar o jogo!')
+					return false
+				}
+
+				window.location.href = 'app.html?' + nivel
+			}
+
+		</script>
+
+	</head>
+
+	<body>
+
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="d-flex justify-content-center">
+						<img src="img/game.png">
+					</div>
+				</div>
+			</div>
+
+			<div class="row d-flex justify-content-center">
+				<div class="col-4">
+					<div class="mb-2">
+						<select class="form-control" id="id_dificuldade">
+							<option value="">-- Selecione a dificuldade --</option>
+							<option value="normal">Normal</option>
+							<option value="dificil">Difícil</option>
+							<option value="chucknorris">Chuck Norris</option>
+						</select>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col">
+					<div class="d-flex justify-content-center">
+						<button onclick="iniciarJogo()" type="button" class="btn btn-danger btn-lg mb-2">Iniciar Jogo</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</body>
+
+</html>

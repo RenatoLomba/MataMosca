@@ -1,0 +1,55 @@
+html {
+	cursor: url('../img/mata_mosca.png') 30 30, auto; /* cursor */
+}
+
+body {
+	background: url('../img/bg.jpg') no-repeat fixed center; /* plano de fundo */
+	background-size: cover;
+	overflow: hidden; /* esconde a barra de rolagem */
+}
+
+/* tamanhos da mosca */
+.mosca1 {
+	width: 50px;
+	height: 50px;
+}
+
+.mosca2 {
+	width: 75px;
+	height: 75px;
+}
+
+.mosca3 {
+	width: 100px;
+	height: 100px;
+}
+
+/* espelhamento da mosca */
+.ladoA {
+	transform: scaleX(1)
+}
+
+.ladoB {
+	transform: scaleX(-1);
+}
+
+/* painel */
+.painel {
+	border-top: 1px solid #fff;
+	position: absolute;
+	width: 190px;
+	padding: 10px;
+	left: 0;
+	bottom: 0;
+	background: rgba(255,255,255,0.7);
+}
+
+.vidas {
+	float: left;
+}
+
+.cronometro {
+	float: left;
+	font-size: 20px;
+	font-weight: bold;
+}
